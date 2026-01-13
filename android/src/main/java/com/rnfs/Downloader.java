@@ -102,7 +102,7 @@ public class Downloader extends AsyncTask<DownloadParams, long[], DownloadResult
         }
 
         input = new BufferedInputStream(connection.getInputStream(), 8 * 1024);
-        output = new FileOutputStream(param.dest);
+        output = new FileOutputStream(param.dest, true);
 
         byte data[] = new byte[8 * 1024];
         long total = 0;
